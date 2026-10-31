@@ -478,10 +478,10 @@ def home():
       <p class="eyebrow">Restaurant · Weekly Events · Event Center</p>
       <h2>Three Ways to Enjoy {amp(SHORT)}</h2>
     </div>
-    <div class="features reveal">
-      <div class="feature"><div class="ico">{ICON['food']}</div><h3><a href="/menu/">The Restaurant</a></h3><p>Soul food plates, NY strip steaks and Cajun salmon. The <a href="/menu/lunch/">$17.99 lunch special</a> and <a href="/menu/dinner/">dinner</a> run Wednesday – Friday.</p></div>
-      <div class="feature"><div class="ico">{ICON['music']}</div><h3><a href="/events/">Weekly Events</a></h3><p><a href="/events/taco-tuesday/">Birria on Tuesdays</a>, <a href="/events/brunch-vibez/">brunch on Saturdays</a> and a <a href="/events/soulfull-sunday/">soul food buffet on Sundays</a>.</p></div>
-      <div class="feature"><div class="ico">{ICON['room']}</div><h3><a href="/event-center/">The Event Center</a></h3><p>Private parties of every kind, with food from our kitchen and a DJ. <a href="/event-center/rental/">Request your date</a>.</p></div>
+    <div class="features media reveal">
+      <div class="feature"><div class="fimg">{img("soul-food-plate-fried-chicken-greens", "Fried chicken with greens, mashed potatoes and gravy", sizes="(max-width: 860px) 100vw, 33vw", w=850, h=550)}</div><div class="ico">{ICON['food']}</div><h3><a href="/menu/">The Restaurant</a></h3><p>Soul food plates, NY strip steaks and Cajun salmon. The <a href="/menu/lunch/">$17.99 lunch special</a> and <a href="/menu/dinner/">dinner</a> run Wednesday – Friday.</p></div>
+      <div class="feature"><div class="fimg">{img("buffet-line-chicken-waffles", "Buffet line with fried chicken and waffles", sizes="(max-width: 860px) 100vw, 33vw", w=850, h=550)}</div><div class="ico">{ICON['music']}</div><h3><a href="/events/">Weekly Events</a></h3><p><a href="/events/taco-tuesday/">Birria on Tuesdays</a>, <a href="/events/brunch-vibez/">brunch on Saturdays</a> and a <a href="/events/soulfull-sunday/">soul food buffet on Sundays</a>.</p></div>
+      <div class="feature"><div class="fimg">{img("event-candlelit-table", "Candlelit event table with glassware", sizes="(max-width: 860px) 100vw, 33vw", w=850, h=550)}</div><div class="ico">{ICON['room']}</div><h3><a href="/event-center/">The Event Center</a></h3><p>Private parties of every kind, with food from our kitchen and a DJ. <a href="/event-center/rental/">Request your date</a>.</p></div>
     </div>
   </div>
 </section>

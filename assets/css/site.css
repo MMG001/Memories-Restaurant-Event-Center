@@ -461,3 +461,9 @@ figcaption{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:
 .go-photo{width:100%;height:100%;max-height:820px;object-fit:cover;border:1px solid var(--line-gold);box-shadow:var(--glow-gold)}
 @media (min-width:901px){.go-grid{align-items:stretch}.go-side{display:flex}.go-photo{height:100%;max-height:none}}
 @media (max-width:900px){.go-photo{aspect-ratio:4/3;max-height:none}}
+.features.media .feature{padding:0 0 30px;display:flex;flex-direction:column;overflow:hidden}
+.features.media .fimg{aspect-ratio:850/550;overflow:hidden}
+.features.media .fimg img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.features.media .feature:hover .fimg img{transform:scale(1.05)}
+.features.media .ico{margin:-23px 0 16px 28px;background:var(--panel);position:relative;z-index:1}
+.features.media h3,.features.media p{padding:0 28px}
