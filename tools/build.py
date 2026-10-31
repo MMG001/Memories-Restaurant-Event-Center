@@ -456,7 +456,7 @@ def home():
 <section class="go alt" id="grand-opening">
   <div class="wrap">
     <div class="center reveal head-gap">
-      <p class="eyebrow">You’re Invited · November 10 – 15</p>
+      <p class="eyebrow">You’re Invited · Nov 10 – 15</p>
       <h2>Grand Opening Week</h2>
       <p class="lead center-lead">Six days to celebrate: tacos and tequila, live music, karaoke, a 90’s party, the return of <a href="/events/brunch-vibez/">Brunch Vibez</a> and the big game. <a href="/events/grand-opening/">See the full Grand Opening schedule</a>.</p>
     </div>
@@ -466,9 +466,7 @@ def home():
         <div class="happy"><h3>Happy Hour</h3><p>{amp(D['happy_hour'])}</p></div>
       </div>
       <div class="go-side reveal">
-        <button type="button" class="flyer-thumb" data-flyer="{A('assets/img/flyer-grand-opening.webp')}" data-alt="Grand Opening flyer">
-          <img src="{A('assets/img/flyer-grand-opening.webp')}" alt="Memoire’s Grand Opening flyer, November 10 – 15" width="707" height="1050" loading="lazy">
-        </button>
+        <img class="go-photo" src="{A('assets/img/memoires-dining-room-windows.webp')}" alt="Memoire’s dining room with black chairs, pendant lights and big windows" width="750" height="850" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -898,9 +896,7 @@ def grand_opening():
         {reviewed()}
       </div>
       <div class="go-side reveal">
-        <button type="button" class="flyer-thumb" data-flyer="{A('assets/img/flyer-grand-opening.webp')}" data-alt="Grand Opening flyer">
-          <img src="{A('assets/img/flyer-grand-opening.webp')}" alt="Memoire’s Grand Opening flyer, November 10 – 15" width="707" height="1050" loading="lazy">
-        </button>
+        <img class="go-photo" src="{A('assets/img/memoires-dining-room-windows.webp')}" alt="Memoire’s dining room with black chairs, pendant lights and big windows" width="750" height="850" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
