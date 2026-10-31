@@ -136,7 +136,7 @@ def nav_html(active):
 
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-         '<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">')
+         '<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">')
 
 FLYER_MODAL = ('<div class="modal" id="flyer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Flyer">'
                '<div class="modal-box img"><button class="modal-x" type="button" aria-label="Close">×</button><img src="" alt=""></div></div>')
@@ -301,17 +301,17 @@ ICONS = {
 
 def home():
     weekly = [
-        ("Tuesday", "Taco Tuesday", "Birria tacos, quesadillas, egg rolls &amp; birria pizza. 11AM – 8PM.", "food-birria.webp", "events.html#taco-tuesday"),
-        ("Wed – Fri", "Lunch Special", "$17.99 — choose a meat and sides. 11AM – 3PM.", "food-mac-chicken.webp", "menu.html#lunch"),
-        ("Wed – Fri", "Dinner", "Steaks, salmon &amp; soul plates. 3:30PM – 8PM.", "food-steak.webp", "menu.html#dinner"),
-        ("Saturday", "Brunch Vibez", "Chicken &amp; waffles, grits &amp; more. 11AM – 6PM.", "food-chicken-waffle.webp", "events.html#brunch-vibez"),
-        ("Sunday", "Soulfull Sunday", "All-you-can-enjoy soul food buffet — $37.99.", "food-soul-plate.webp", "events.html#soulfull-sunday"),
+        ("Tuesdays", "11AM – 8PM", "Taco Tuesday", "Birria tacos, quesadillas, egg rolls and birria pizza, all with consomé &amp; limes.", "From $14", "food-birria.webp", "events.html#taco-tuesday"),
+        ("Wed – Fri", "11AM – 3PM", "Lunch Special", "Choose your meat and sides — catfish, wings, blackened chicken or salmon.", "$17.99", "food-mac-chicken.webp", "menu.html#lunch"),
+        ("Wed – Fri", "3:30PM – 8PM", "Dinner", "NY strip steaks, Cajun salmon medley, soul plates and vegan favorites.", "From $18", "food-steak.webp", "menu.html#dinner"),
+        ("Saturdays", "11AM – 6PM", "Brunch Vibez", "Chicken &amp; waffles, shrimp &amp; grits, steak &amp; eggs and the Boss Brunch.", "From $22", "food-chicken-waffle.webp", "events.html#brunch-vibez"),
+        ("Sundays", "Soul Food Buffet", "Soulfull Sunday", "Includes a drink &amp; going through the buffet 3 times.", "$37.99", "food-soul-plate.webp", "events.html#soulfull-sunday"),
     ]
     cards = "".join(
-        f'<article class="card reveal"><div class="ph"><img src="assets/img/{img}" alt="" loading="lazy"></div>'
-        f'<div class="body"><span class="day">{d}</span><h3>{t}</h3><p>{p}</p><span class="more">Details</span></div>'
+        f'<article class="card reveal"><div class="ph"><img src="assets/img/{img}" alt="" loading="lazy"><span class="badge">{b}</span></div>'
+        f'<div class="body"><span class="day">{d}</span><h3>{t}</h3><p>{p}</p><div class="foot"><span class="price">{pr}</span><span class="more">Details</span></div></div>'
         f'<a class="cover" href="{h}" aria-label="{e(t)}"></a></article>'
-        for d, t, p, img, h in weekly)
+        for b, d, t, p, pr, img, h in weekly)
     main = f"""
 <section class="hero">
   <div class="bg"><img src="assets/img/exterior-front.webp" alt="" fetchpriority="high"></div>
@@ -371,7 +371,7 @@ def home():
       <span class="eyebrow">Every Week</span>
       <h2>Something to Look Forward To</h2>
     </div>
-    <div class="cards">{cards}</div>
+    <div class="cards five">{cards}</div>
   </div>
 </section>
 
