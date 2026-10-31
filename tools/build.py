@@ -522,14 +522,6 @@ def home():
   </div>
 </section>
 
-<section class="alt">
-  <div class="narrow-c">
-    <div class="center reveal head-gap"><p class="eyebrow">FAQ</p><h2>Good to Know</h2></div>
-    {faq_html(FAQ[:4])}
-    <div class="btn-row center-row"><a class="btn ghost" href="/faq/">All Questions</a><a class="btn ghost" href="/guides/">Guides</a></div>
-    {reviewed()}
-  </div>
-</section>
 {cta()}"""
     pop = ""
     for g in GO:
