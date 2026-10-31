@@ -107,10 +107,9 @@ HOURS = [
 NAV = [
     ("Home", "index.html", [("Grand Opening", "index.html#grand-opening")]),
     ("About", "about.html", []),
-    ("Menu", "menu.html", [("Dinner", "menu.html#dinner")]),
+    ("Menu", "menu.html", [("Lunch (Wed–Fri 11am–3pm)", "menu.html#lunch"), ("Dinner", "menu.html#dinner")]),
     ("Events", "events.html", [
         ("Brunch Vibez (Saturdays)", "events.html#brunch-vibez"),
-        ("Lunch (Wed–Fri 11am–3pm)", "events.html#lunch"),
         ("Taco Tuesday (11am–8pm)", "events.html#taco-tuesday"),
         ("Soulfull Sundays", "events.html#soulfull-sunday"),
     ]),
@@ -203,7 +202,8 @@ def page(fname, title, desc, active, main, extra_end=""):
     <div>
       <h4>Explore</h4>
       <ul>
-        <li><a href="menu.html">Dinner Menu</a></li>
+        <li><a href="menu.html#lunch">Lunch Menu</a></li>
+        <li><a href="menu.html#dinner">Dinner Menu</a></li>
         <li><a href="events.html">Weekly Events</a></li>
         <li><a href="event-center.html">Event Center</a></li>
         <li><a href="gallery.html">Gallery</a></li>
@@ -302,7 +302,7 @@ ICONS = {
 def home():
     weekly = [
         ("Tuesday", "Taco Tuesday", "Birria tacos, quesadillas, egg rolls &amp; birria pizza. 11AM – 8PM.", "food-birria.webp", "events.html#taco-tuesday"),
-        ("Wed – Fri", "Lunch Special", "$17.99 — choose a meat and sides. 11AM – 3PM.", "food-mac-chicken.webp", "events.html#lunch"),
+        ("Wed – Fri", "Lunch Special", "$17.99 — choose a meat and sides. 11AM – 3PM.", "food-mac-chicken.webp", "menu.html#lunch"),
         ("Wed – Fri", "Dinner", "Steaks, salmon &amp; soul plates. 3:30PM – 8PM.", "food-steak.webp", "menu.html#dinner"),
         ("Saturday", "Brunch Vibez", "Chicken &amp; waffles, grits &amp; more. 11AM – 6PM.", "food-chicken-waffle.webp", "events.html#brunch-vibez"),
         ("Sunday", "Soulfull Sunday", "All-you-can-enjoy soul food buffet — $37.99.", "food-soul-plate.webp", "events.html#soulfull-sunday"),
@@ -460,8 +460,29 @@ def about():
 
 
 def menu():
-    main = banner("Our Menu", "Dinner at Memoire’s", "Hand-cut steaks, Cajun salmon and soul food plates — served Wednesday through Friday evenings.", "food-steak-fillet.webp", "Menu") + f"""
-<section id="dinner">
+    main = banner("Our Menu", "Lunch &amp; Dinner", "Soul food plates, hand-cut steaks and Cajun salmon — served Wednesday through Friday.", "food-steak-fillet.webp", "Menu") + f"""
+<section id="lunch">
+  <div class="wrap">
+    <div class="split reveal">
+      <div>
+        <span class="eyebrow">Lunch Menu · Wednesday – Friday</span>
+        <h2>Lunch Special</h2>
+        <div class="price-hero"><span>$</span>17.99</div>
+        <p class="lead">Pick your meat and sides for a midday plate done right.</p>
+        <p><span class="when">Wed – Fri · 11AM – 3PM</span></p>
+      </div>
+      <div class="frame"><img src="assets/img/food-mac-chicken.webp" alt="Lunch plate with mac and cheese" loading="lazy"></div>
+    </div>
+    <div class="opts reveal">
+      {opt("Meats", LUNCH_MEATS)}
+      {opt("Sides", LUNCH_SIDES)}
+      {opt("Vegan Option", LUNCH_VEGAN, '<div class="big">$16</div>')}
+    </div>
+    {flyer_btn("flyer-lunch.jpg", "Lunch Special flyer", "View the lunch flyer")}
+  </div>
+</section>
+
+<section id="dinner" class="alt">
   <div class="wrap">
     <div class="menu-head reveal">
       <div><span class="eyebrow">Dinner Menu</span><h2>Dinner</h2></div>
@@ -475,27 +496,27 @@ def menu():
     <div class="reveal">{flyer_btn("flyer-dinner.jpg", "Dinner menu flyer", "View the dinner flyer")}</div>
   </div>
 </section>
-<section class="alt">
+<section>
   <div class="wrap center reveal">
     <span class="eyebrow">More to Taste</span>
-    <h2>Lunch, Brunch &amp; Weekly Specials</h2>
-    <p class="lead">Our lunch special, Taco Tuesday, Brunch Vibez and Soulfull Sunday menus live on the Events page.</p>
+    <h2>Brunch &amp; Weekly Specials</h2>
+    <p class="lead">Taco Tuesday, Brunch Vibez and Soulfull Sunday menus live on the Events page.</p>
     <div class="pills">
-      <a href="events.html#lunch">Lunch Special</a><a href="events.html#taco-tuesday">Taco Tuesday</a>
+      <a href="events.html#taco-tuesday">Taco Tuesday</a>
       <a href="events.html#brunch-vibez">Brunch Vibez</a><a href="events.html#soulfull-sunday">Soulfull Sunday</a>
     </div>
   </div>
 </section>
 """ + cta("food-steak.webp")
-    page("menu.html", "Dinner Menu", "Memoire’s dinner menu — Memoire’s Cut, Boss Cut, Salmon Medley and vegan options. Wed–Fri 3:30PM–8PM.", "menu.html", main)
+    page("menu.html", "Lunch & Dinner Menu", "Memoire’s menu — $17.99 lunch special Wed–Fri 11AM–3PM; dinner with Memoire’s Cut, Boss Cut, Salmon Medley and vegan options Wed–Fri 3:30PM–8PM.", "menu.html", main)
 
 
 def events():
-    main = banner("Every Week at Memoire’s", "Events &amp; Specials", "Brunch on Saturday, buffet on Sunday, tacos on Tuesday and lunch midweek.", "food-chicken-waffle.webp", "Events") + f"""
+    main = banner("Every Week at Memoire’s", "Events &amp; Specials", "Brunch on Saturday, buffet on Sunday and tacos on Tuesday.", "food-chicken-waffle.webp", "Events") + f"""
 <section style="padding-bottom:0">
   <div class="wrap center">
     <div class="pills" style="margin-top:0">
-      <a href="#brunch-vibez">Brunch Vibez</a><a href="#lunch">Lunch</a><a href="#taco-tuesday">Taco Tuesday</a><a href="#soulfull-sunday">Soulfull Sundays</a>
+      <a href="#brunch-vibez">Brunch Vibez</a><a href="#taco-tuesday">Taco Tuesday</a><a href="#soulfull-sunday">Soulfull Sundays</a>
     </div>
   </div>
 </section>
@@ -519,28 +540,7 @@ def events():
   </div>
 </section>
 
-<section id="lunch" class="alt">
-  <div class="wrap">
-    <div class="split reveal">
-      <div>
-        <span class="eyebrow">Wednesday – Friday</span>
-        <h2>Lunch Special</h2>
-        <div class="price-hero"><span>$</span>17.99</div>
-        <p class="lead">Pick your meat and sides for a midday plate done right.</p>
-        <p><span class="when">Wed – Fri · 11AM – 3PM</span></p>
-      </div>
-      <div class="frame"><img src="assets/img/food-mac-chicken.webp" alt="Lunch plate with mac and cheese" loading="lazy"></div>
-    </div>
-    <div class="opts reveal">
-      {opt("Meats", LUNCH_MEATS)}
-      {opt("Sides", LUNCH_SIDES)}
-      {opt("Vegan Option", LUNCH_VEGAN, '<div class="big">$16</div>')}
-    </div>
-    {flyer_btn("flyer-lunch.jpg", "Lunch Special flyer", "View the lunch flyer")}
-  </div>
-</section>
-
-<section id="taco-tuesday">
+<section id="taco-tuesday" class="alt">
   <div class="wrap">
     <div class="split rev reveal" style="margin-bottom:30px">
       <div>
@@ -561,7 +561,7 @@ def events():
   </div>
 </section>
 
-<section id="soulfull-sunday" class="alt">
+<section id="soulfull-sunday">
   <div class="wrap">
     <div class="split reveal">
       <div>
@@ -583,7 +583,7 @@ def events():
   </div>
 </section>
 """ + cta("food-chicken-cornbread.webp")
-    page("events.html", "Events & Specials", "Weekly at Memoire’s: Brunch Vibez Saturdays, Lunch Special Wed–Fri, Taco Tuesday and Soulfull Sunday soul food buffet.", "events.html", main)
+    page("events.html", "Events & Specials", "Weekly at Memoire’s: Brunch Vibez Saturdays, Taco Tuesday and Soulfull Sunday soul food buffet.", "events.html", main)
 
 
 def gallery():
