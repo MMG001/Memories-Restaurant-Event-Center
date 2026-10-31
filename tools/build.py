@@ -484,17 +484,16 @@ def home():
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="center reveal head-gap"><p class="eyebrow">Who We Serve</p><h2>A Table for Everyone</h2></div>
-    <div class="aud reveal">
-      <div><h3>Weekday lunch crowd</h3><p>A $17.99 plate with your choice of meat and sides, Wednesday to Friday. <a href="/menu/lunch/">See lunch</a>.</p></div>
-      <div><h3>Date night &amp; dinner</h3><p>The Memoire’s Cut, the Boss Cut and the Salmon Medley. <a href="/menu/dinner/">See dinner</a>.</p></div>
-      <div><h3>Brunch groups</h3><p>Saturday brunch from 11AM to 6PM, by reservation. <a href="/events/brunch-vibez/">Brunch Vibez</a>.</p></div>
-      <div><h3>Families</h3><p>The Sunday buffet and a $12 kids meal at brunch. <a href="/events/soulfull-sunday/">Sunday buffet</a>.</p></div>
-      <div><h3>Vegan diners</h3><p>Vegan stroganoff, the Dirty Cabbage Skillet and Veggie Birria. <a href="/faq/">Vegan FAQ</a>.</p></div>
-      <div><h3>Event hosts</h3><p>Birthdays, repasts, showers and corporate events. <a href="/event-center/">Event center</a>.</p></div>
+<section class="cater">
+  <div class="bg">{img("candlelit-wine-glasses", "", sizes="100vw", w=1900, h=800)}</div>
+  <div class="wrap cater-grid">
+    <div class="cater-copy reveal">
+      <p class="eyebrow">Catering</p>
+      <h2>Cater Your Next Event with {amp(SHORT)}</h2>
+      <p>Planning a birthday, shower, repast or company celebration? Let our kitchen handle the food. Fried chicken, mac &amp; cheese, greens, yams and cornbread, made the {amp(SHORT)} way. Tell us your date and guest count, and we’ll help you build the menu.</p>
+      <div class="btn-row"><a class="btn" href="/event-center/rental/">Request Catering</a><a class="btn ghost" href="{TEL}">Call {PHONE}</a></div>
     </div>
+    <div class="cater-img reveal">{img("soul-food-catering-spread", "Soul food catering spread with fried chicken, mac and cheese, greens, yams and cornbread", sizes="(max-width: 860px) 100vw, 50vw", w=940, h=550)}</div>
   </div>
 </section>
 
