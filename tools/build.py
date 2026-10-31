@@ -107,10 +107,10 @@ HOURS = [
 NAV = [
     ("Home", "index.html", [("Grand Opening", "index.html#grand-opening")]),
     ("About", "about.html", []),
-    ("Menu", "menu.html", [("Lunch (Wed–Fri 11am–3pm)", "menu.html#lunch"), ("Dinner", "menu.html#dinner")]),
+    ("Menu", "menu.html", [("Lunch", "menu.html#lunch"), ("Dinner", "menu.html#dinner")]),
     ("Events", "events.html", [
-        ("Brunch Vibez (Saturdays)", "events.html#brunch-vibez"),
-        ("Taco Tuesday (11am–8pm)", "events.html#taco-tuesday"),
+        ("Brunch Vibez", "events.html#brunch-vibez"),
+        ("Taco Tuesday", "events.html#taco-tuesday"),
         ("Soulfull Sundays", "events.html#soulfull-sunday"),
     ]),
     ("Gallery", "gallery.html", []),
