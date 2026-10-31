@@ -446,10 +446,6 @@ def home():
 <section class="intro">
   <div class="narrow-c center reveal">
     <p class="lead big"><strong>{amp(NAME)}</strong> is a soul food restaurant and private event venue at {ADDR1} in {B['neighborhood']}, serving lunch, dinner, Saturday brunch, Taco Tuesday and a Sunday soul food buffet for diners, families and event hosts.</p>
-    <div class="chips"><span class="chips-l">What do you need?</span>
-      <a href="/menu/lunch/">Lunch today</a><a href="/menu/dinner/">Dinner menu</a><a href="/events/brunch-vibez/">Saturday brunch</a>
-      <a href="/events/taco-tuesday/">Birria tacos</a><a href="/events/soulfull-sunday/">Sunday buffet</a><a href="/event-center/rental/">Book an event</a><a href="/visit/">Directions</a>
-    </div>
   </div>
 </section>
 
