@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://memories-restaurant-event-center.pages.dev/sitemap.xml

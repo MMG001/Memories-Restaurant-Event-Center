@@ -1,15 +1,16 @@
 # Memoire's Restaurant & Event Center
 
-Static website for Memoire's Restaurant & Event Center — 2201 N 44th Ave, Minneapolis, MN 55412 · 612.223.3679.
+Static site · 2201 N 44th Ave, Minneapolis, MN 55412 · 612.223.3679
 
-## Deploy (Cloudflare Pages)
-- Framework preset: **None** · Build command: *(empty)* · Output directory: `/`
-- Every push to `main` deploys.
+## How it works
+- **`data/site.json`**: single source of truth (NAP, hours, menus, prices, events, the "need from client" list).
+- **`tools/build.py`**: generates every page as `/path/index.html` (clean URLs), plus `sitemap.xml`, `robots.txt`,
+  `_redirects` and `_headers`, then runs the build-time QA. The build fails if any QA check fails.
+- Cloudflare Pages: no build command, output directory `/`. Every push to `main` deploys.
 
-## Editing content
-All page content (menus, prices, events, FAQ, hours) lives in `tools/build.py`.
-Edit it, then run `python3 tools/build.py` to regenerate the `.html` pages and commit.
+## Edit content
+Change `data/site.json` (or page copy in `tools/build.py`), run `python3 tools/build.py`, commit, push.
 
-## Forms
-Rental and contact forms open the visitor's email app, addressed to `INQUIRY_EMAIL`
-in `assets/js/site.js`. Until that's set, visitors are shown their request and asked to call.
+## Going live on a custom domain
+Set `site_url` to the domain and `"indexable": true` in `data/site.json`, rebuild, push.
+While `indexable` is false, every page is `noindex` (preview host).

@@ -1,0 +1,115 @@
+{
+  "_note": "Single source of truth. Every page renders business facts from this file. Edit here, run python3 tools/build.py, commit.",
+  "site_url": "https://memories-restaurant-event-center.pages.dev",
+  "indexable": false,
+  "updated": "2026-10-31",
+  "updated_display": "October 31, 2026",
+  "business": {
+    "name": "Memoire's Restaurant & Event Center",
+    "short_name": "Memoire's",
+    "phone_display": "612.223.3679",
+    "phone_e164": "+16122233679",
+    "street": "2201 N 44th Ave",
+    "city": "Minneapolis",
+    "region": "MN",
+    "region_name": "Minnesota",
+    "postal": "55412",
+    "country": "US",
+    "neighborhood": "North Minneapolis",
+    "geo": { "lat": 45.0353056, "lng": -93.3088256 },
+    "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.488616996011!2d-93.30882559999999!3d45.035305599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b33178124f1815%3A0xc4e937c2f0a73bae!2s2201%20N%2044th%20Ave%2C%20Minneapolis%2C%20MN%2055412!5e0!3m2!1sen!2sus!4v1793425613374!5m2!1sen!2sus",
+    "directions": "https://www.google.com/maps/dir/?api=1&destination=2201+N+44th+Ave,+Minneapolis,+MN+55412",
+    "cuisine": ["Soul food", "Southern", "Birria"],
+    "same_as": [],
+    "wikidata_city": "https://www.wikidata.org/wiki/Q36091",
+    "wikipedia_city": "https://en.wikipedia.org/wiki/Minneapolis"
+  },
+  "hours": [
+    { "label": "Tuesday", "text": "11AM – 8PM · Taco Tuesday", "days": ["Tuesday"], "opens": "11:00", "closes": "20:00" },
+    { "label": "Wednesday – Friday", "text": "Lunch 11AM – 3PM · Dinner 3:30PM – 8PM", "days": ["Wednesday", "Thursday", "Friday"], "opens": "11:00", "closes": "20:00" },
+    { "label": "Saturday", "text": "11AM – 6PM · Brunch Vibez", "days": ["Saturday"], "opens": "11:00", "closes": "18:00" },
+    { "label": "Sunday", "text": "Soulfull Sunday buffet · call for hours", "days": [], "opens": "", "closes": "" }
+  ],
+  "happy_hour": "Tuesday – Friday · 11AM – 1PM & 6PM – 8PM",
+  "grand_opening": [
+    { "slug": "tacos-and-tequila", "dow": "Tues", "date": "2026-11-10", "day": "10", "title": "Tacos & Tequila", "sub": "$20 rail happy hour flights", "time": "", "start": "2026-11-10", "end": "" },
+    { "slug": "live-and-local", "dow": "Wed", "date": "2026-11-11", "day": "11", "title": "Live & Local", "sub": "Just Dream", "time": "8PM – 12AM", "start": "2026-11-11T20:00:00-06:00", "end": "2026-11-12T00:00:00-06:00" },
+    { "slug": "jeopardy-karaoke", "dow": "Thur", "date": "2026-11-12", "day": "12", "title": "Jeopardy Karaoke", "sub": "", "time": "8PM – 12AM", "start": "2026-11-12T20:00:00-06:00", "end": "2026-11-13T00:00:00-06:00" },
+    { "slug": "finally-fridays", "dow": "Fri", "date": "2026-11-13", "day": "13", "title": "Finally Fridays!", "sub": "90’s Party", "time": "9PM – 1AM", "start": "2026-11-13T21:00:00-06:00", "end": "2026-11-14T01:00:00-06:00" },
+    { "slug": "brunch-vibez-return", "dow": "Sat", "date": "2026-11-14", "day": "14", "title": "Brunch Vibez!!!", "sub": "The official return of Brunch Vibez", "time": "11AM – 6PM", "start": "2026-11-14T11:00:00-06:00", "end": "2026-11-14T18:00:00-06:00" },
+    { "slug": "vikings-vs-packers", "dow": "Sun", "date": "2026-11-15", "day": "15", "title": "Vikings vs Packers", "sub": "", "time": "11AM – 6PM", "start": "2026-11-15T11:00:00-06:00", "end": "2026-11-15T18:00:00-06:00" }
+  ],
+  "menus": {
+    "lunch": {
+      "price": "17.99",
+      "when": "Wednesday – Friday · 11AM – 3PM",
+      "meats": ["Catfish (1.6oz filet)", "Chicken Wings (3)", "Blackened Chicken", "Blackened Salmon"],
+      "sides": ["Mac & Cheese", "Greens", "Yams", "Rice", "Red Beans and Rice", "Broccoli", "Fries", "House Salad"],
+      "vegan_price": "16",
+      "vegan": ["Vegan Stroganoff with Texas Toast", "Parmesan Eggplant"]
+    },
+    "dinner": {
+      "when": "Wednesday – Friday · 3:30PM – 8PM",
+      "items": [
+        { "name": "Memoire’s Cut", "price": "28", "desc": "A juicy, cooked-to-your-liking 10oz NY strip steak with 1 delicious side & Texas toast." },
+        { "name": "Boss Cut", "price": "35", "desc": "12oz NY strip steak with 2 delicious sides & Texas toast." },
+        { "name": "Salmon Medley", "price": "26", "desc": "7oz salmon over a bed of seasoned rice with a Cajun drizzle and vegetable medley." },
+        { "name": "The Memoire’s", "price": "25", "desc": "Choose 1 meat along with 2 delicious sides." },
+        { "name": "Meatless Memories", "price": "23", "desc": "Vegan stroganoff with Texas toast.", "tag": "Vegan" },
+        { "name": "Dirty Cabbage Skillet", "price": "18", "desc": "Vegan sizzling skillet with Impossible meat, caramelized cabbage and peppers, smothered in Cajun seasoning.", "tag": "Vegan" }
+      ],
+      "meats": ["Catfish", "Chicken Wings", "Salmon"],
+      "sides": ["Mac & Cheese", "Greens", "Yams", "Rice", "Red Beans and Rice", "Broccoli"]
+    },
+    "brunch": {
+      "when": "Saturdays · 11AM – 6PM",
+      "items": [
+        { "name": "French Toast & Flats", "price": "24", "desc": "Berry topping." },
+        { "name": "Vibe", "price": "26", "desc": "1 meat & 2 sides." },
+        { "name": "Vibration", "price": "28", "desc": "1 meat & 3 sides." },
+        { "name": "That’s a Vibe", "price": "32", "desc": "2 meats & 3 sides." },
+        { "name": "Catfish & Grits", "price": "26", "desc": "" },
+        { "name": "Shrimp & Grits", "price": "26", "desc": "" },
+        { "name": "Steak & Egg*", "price": "30", "desc": "2 eggs any style, steak & Texas toast." },
+        { "name": "Chicken & Waffle", "price": "22", "desc": "Choice of 3 whole wings or 2 strips. Waffle comes with strawberries & powdered sugar." },
+        { "name": "Deep Fried Grits", "price": "23", "desc": "Comes with Texas toast, topped with green onions, shredded cheese & a creamy buttersauce." },
+        { "name": "Boss Brunch*", "price": "40", "desc": "Grits, shrimp (4), 10oz NY strip steak & Texas toast." },
+        { "name": "Kids Meal", "price": "12", "desc": "2 mini waffles or 1 pancake." }
+      ]
+    },
+    "taco": {
+      "when": "Tuesdays · 11AM – 8PM",
+      "items": [
+        { "name": "3 Beef Birrias", "price": "14", "desc": "Comes with consomé & limes." },
+        { "name": "Birria Quesadilla", "price": "15", "desc": "Comes with consomé & limes." },
+        { "name": "Birria Egg Rolls", "price": "15", "desc": "Comes with consomé & limes." },
+        { "name": "Birria Pizza", "price": "24", "desc": "Comes with consomé & limes." },
+        { "name": "Veggie Birria", "price": "14", "desc": "Comes with consomé & limes." }
+      ],
+      "flight": { "price": "15", "detail": "4 tacos", "when": "11AM – 3PM" },
+      "snack": { "price": "22", "detail": "3 tacos & 2 egg rolls" },
+      "meats": ["Chicken", "Shredded Beef", "Shrimp"]
+    },
+    "sunday": {
+      "price": "37.99",
+      "includes": "Includes a drink & going through the buffet 3 times.",
+      "meats": ["Roast", "Smothered Chicken", "Fried Chicken", "Catfish"],
+      "sides": ["Black Eyed Peas", "Cabbage (Turkey)", "Rice", "Yams", "Mac & Cheese", "Green Beans & Potatoes (Pork)", "Cornbread"],
+      "desserts": ["Caramel Cake", "Banana Pudding"],
+      "drinks_note": "We proudly serve Pepsi products."
+    }
+  },
+  "event_types": ["Birthdays", "Weddings & Receptions", "Bridal & Baby Showers", "Anniversaries", "Graduations", "Family Reunions", "Repasts & Celebrations of Life", "Corporate Events", "Holiday Parties", "Fundraisers", "Networking Mixers", "Private Dinners"],
+  "need_from_client": [
+    "Custom domain (the site stays noindex on pages.dev until it has one)",
+    "Inbox for form submissions + confirmation emails",
+    "Exact Google Business Profile name, rating and review count; 3+ real reviews to quote",
+    "Sunday buffet hours; whether Monday is closed",
+    "Lunch catfish portion (flyer says 1.6oz)",
+    "Social profile URLs (Facebook, Instagram, etc.)",
+    "Parking, transit and accessibility details for the Visit page",
+    "Founding/opening year and owner or chef name for About",
+    "Event center capacity, rental pricing or price drivers",
+    "Real photos of food (current food photos are stock), events and the team"
+  ]
+}
