@@ -467,3 +467,7 @@ figcaption{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:
 .features.media .feature:hover .fimg img{transform:scale(1.05)}
 .features.media .ico{margin:-23px 0 16px 28px;background:var(--panel);position:relative;z-index:1}
 .features.media h3,.features.media p{padding:0 28px}
+.go-list.two{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,auto);grid-auto-flow:column;gap:22px 28px}
+.go-list.two li{padding:22px 26px}
+.wide-happy{margin-top:28px;justify-content:center}
+@media (max-width:760px){.go-list.two{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row;gap:16px}}

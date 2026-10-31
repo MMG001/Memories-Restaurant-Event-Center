@@ -460,14 +460,9 @@ def home():
       <h2>Grand Opening Week</h2>
       <p class="lead center-lead">Six days to celebrate: tacos and tequila, live music, karaoke, a 90’s party, the return of <a href="/events/brunch-vibez/">Brunch Vibez</a> and the big game. <a href="/events/grand-opening/">See the full Grand Opening schedule</a>.</p>
     </div>
-    <div class="go-grid">
-      <div class="reveal">
-        <ul class="go-list">{go_rows()}</ul>
-        <div class="happy"><h3>Happy Hour</h3><p>{amp(D['happy_hour'])}</p></div>
-      </div>
-      <div class="go-side reveal">
-        <img class="go-photo" src="{A('assets/img/memoires-dining-room-windows.webp')}" alt="Memoire’s dining room with black chairs, pendant lights and big windows" width="750" height="850" loading="lazy" decoding="async">
-      </div>
+    <div class="reveal">
+      <ul class="go-list two">{go_rows()}</ul>
+      <div class="happy wide-happy"><h3>Happy Hour</h3><p>{amp(D['happy_hour'])}</p></div>
     </div>
   </div>
 </section>
