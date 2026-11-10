@@ -480,3 +480,8 @@ figcaption{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:
 .cater-copy p:not(.eyebrow){color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.8);font-size:1.08rem;max-width:46ch}
 .cater-img img{width:100%;height:auto;border:1px solid var(--line-gold);box-shadow:0 30px 60px rgba(0,0,0,.55),var(--glow-gold)}
 @media (max-width:860px){.cater-grid{grid-template-columns:1fr}.cater::after{background:rgba(19,19,19,.45)}}
+figure.dish{margin:0}
+figure.dish figcaption{padding-top:26px}
+.split.dishes{margin:48px 0 28px;align-items:start}
+.split.dishes .sm-h{margin-top:0}
+.opts+figure.dish{margin:48px auto 0;max-width:640px}

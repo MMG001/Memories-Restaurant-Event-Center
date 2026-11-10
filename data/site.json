@@ -2,8 +2,8 @@
   "_note": "Single source of truth. Every page renders business facts from this file. Edit here, run python3 tools/build.py, commit.",
   "site_url": "https://memories-restaurant-event-center.pages.dev",
   "indexable": false,
-  "updated": "2026-10-31",
-  "updated_display": "October 31, 2026",
+  "updated": "2026-11-10",
+  "updated_display": "November 10, 2026",
   "business": {
     "name": "Memoire's Restaurant & Event Center",
     "short_name": "Memoire's",
@@ -110,6 +110,6 @@
     "Parking, transit and accessibility details for the Visit page",
     "Founding/opening year and owner or chef name for About",
     "Event center capacity, rental pricing or price drivers",
-    "Real photos of food (current food photos are stock), events and the team"
+    "More real photos: tacos, chicken & waffles, salmon, buffet, events and the team (4 real food photos added Nov 10; the rest are stock)"
   ]
 }

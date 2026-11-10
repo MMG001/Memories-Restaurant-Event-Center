@@ -422,9 +422,9 @@ def go_rows(with_ids=False):
 def home():
     cards = "".join([
         card("Taco Tuesday", "Tuesdays", "11AM – 8PM", "Beef birria tacos, quesadillas, egg rolls and birria pizza, all with consomé &amp; limes.", "From $14", "beef-birria-tacos", "Beef birria tacos with lime", "/events/taco-tuesday/"),
-        card("Lunch Special", "Wed – Fri", "11AM – 3PM", "Choose a meat and sides: catfish, wings, blackened chicken or blackened salmon.", money(M["lunch"]["price"]), "mac-and-cheese-fried-chicken-plate", "Fried chicken with mac and cheese", "/menu/lunch/"),
+        card("Lunch Special", "Wed – Fri", "11AM – 3PM", "Choose a meat and sides: catfish, wings, blackened chicken or blackened salmon.", money(M["lunch"]["price"]), "fried-wings-greens-red-beans-rice", "Fried chicken wings with greens and red beans and rice", "/menu/lunch/"),
         card("Dinner Menu", "Wed – Fri", "3:30PM – 8PM", "NY strip steaks, Cajun salmon medley, soul food plates and vegan dishes.", "From $18", "grilled-ny-strip-steak", "Grilled NY strip steak with vegetables", "/menu/dinner/"),
-        card("Brunch Vibez", "Saturdays", "11AM – 6PM", "Chicken &amp; waffles, shrimp &amp; grits, steak &amp; eggs and the Boss Brunch.", "From $22", "chicken-and-waffles", "Chicken and waffles with syrup", "/events/brunch-vibez/"),
+        card("Brunch Vibez", "Saturdays", "11AM – 6PM", "Chicken &amp; waffles, shrimp &amp; grits, steak &amp; eggs and the Boss Brunch.", "From $22", "steak-eggs-texas-toast", "Steak and eggs with Texas toast", "/events/brunch-vibez/"),
         card("Soulfull Sunday", "Sundays", "Soul Food Buffet", "Includes a drink &amp; going through the buffet 3 times.", "$" + M["sunday"]["price"], "soul-food-plate-greens-mashed-potatoes", "Soul food plate with greens and mashed potatoes", "/events/soulfull-sunday/"),
     ])
     hero = f"""<section class="hero">
@@ -470,7 +470,7 @@ def home():
       <h2>Three Ways to Enjoy {amp(SHORT)}</h2>
     </div>
     <div class="features media reveal">
-      <div class="feature"><div class="fimg">{img("soul-food-plate-fried-chicken-greens", "Fried chicken with greens, mashed potatoes and gravy", sizes="(max-width: 860px) 100vw, 33vw", w=850, h=550)}</div><div class="ico">{ICON['food']}</div><h3><a href="/menu/">The Restaurant</a></h3><p>Soul food plates, NY strip steaks and Cajun salmon. The <a href="/menu/lunch/">$17.99 lunch special</a> and <a href="/menu/dinner/">dinner</a> run Wednesday – Friday.</p></div>
+      <div class="feature"><div class="fimg">{img("fried-catfish-shrimp-mac-greens-yams", "Fried catfish and shrimp with mac and cheese, greens and yams", sizes="(max-width: 860px) 100vw, 33vw", w=850, h=550)}</div><div class="ico">{ICON['food']}</div><h3><a href="/menu/">The Restaurant</a></h3><p>Soul food plates, NY strip steaks and Cajun salmon. The <a href="/menu/lunch/">$17.99 lunch special</a> and <a href="/menu/dinner/">dinner</a> run Wednesday – Friday.</p></div>
       <div class="feature"><div class="fimg">{img("buffet-line-chicken-waffles", "Buffet line with fried chicken and waffles", sizes="(max-width: 860px) 100vw, 33vw", w=850, h=550)}</div><div class="ico">{ICON['music']}</div><h3><a href="/events/">Weekly Events</a></h3><p><a href="/events/taco-tuesday/">Birria on Tuesdays</a>, <a href="/events/brunch-vibez/">brunch on Saturdays</a> and a <a href="/events/soulfull-sunday/">soul food buffet on Sundays</a>.</p></div>
       <div class="feature"><div class="fimg">{img("event-candlelit-table", "Candlelit event table with glassware", sizes="(max-width: 860px) 100vw, 33vw", w=850, h=550)}</div><div class="ico">{ICON['room']}</div><h3><a href="/event-center/">The Event Center</a></h3><p>Private parties of every kind, with food from our kitchen and a DJ. <a href="/event-center/rental/">Request your date</a>.</p></div>
     </div>
@@ -590,9 +590,9 @@ def about():
 
 def menu_hub():
     cards = "".join([
-        card("Lunch Special", "Wed – Fri", "11AM – 3PM", "Pick a meat and sides for a $17.99 plate, or the $16 vegan option.", money(M["lunch"]["price"]), "mac-and-cheese-fried-chicken-plate", "Fried chicken with mac and cheese", "/menu/lunch/"),
+        card("Lunch Special", "Wed – Fri", "11AM – 3PM", "Pick a meat and sides for a $17.99 plate, or the $16 vegan option.", money(M["lunch"]["price"]), "fried-wings-greens-red-beans-rice", "Fried chicken wings with greens and red beans and rice", "/menu/lunch/"),
         card("Dinner Menu", "Wed – Fri", "3:30PM – 8PM", "NY strip steaks, Salmon Medley, The Memoire’s plate and vegan skillets.", "From $18", "grilled-ny-strip-steak", "Grilled NY strip steak", "/menu/dinner/"),
-        card("Brunch Vibez", "Saturdays", "11AM – 6PM", "Chicken &amp; waffles, grits, steak &amp; eggs and a kids meal.", "From $12", "chicken-and-waffles", "Chicken and waffles", "/events/brunch-vibez/"),
+        card("Brunch Vibez", "Saturdays", "11AM – 6PM", "Chicken &amp; waffles, grits, steak &amp; eggs and a kids meal.", "From $12", "steak-eggs-texas-toast", "Steak and eggs with Texas toast", "/events/brunch-vibez/"),
         card("Taco Tuesday", "Tuesdays", "11AM – 8PM", "Beef birria tacos, quesadillas, egg rolls and birria pizza.", "From $14", "beef-birria-tacos", "Birria tacos", "/events/taco-tuesday/"),
         card("Soulfull Sunday", "Sundays", "Buffet", "Soul food buffet with a drink and 3 trips through the line.", "$" + M["sunday"]["price"], "soul-food-plate-greens-mashed-potatoes", "Soul food plate", "/events/soulfull-sunday/"),
     ])
@@ -635,7 +635,7 @@ def lunch():
         <p><span class="when">{L['when']}</span></p>
         <div class="btn-row"><a class="btn" href="{TEL}">Call {PHONE}</a><a class="btn ghost" href="/menu/dinner/">Dinner Menu</a></div>
       </div>
-      <div class="frame">{img("mac-and-cheese-fried-chicken-plate", "Lunch plate of fried chicken and mac and cheese")}</div>
+      <div class="frame">{img("fried-wings-greens-red-beans-rice", "Lunch plates of fried chicken wings with greens and red beans and rice", w=850, h=550)}</div>
     </div>
     <h2 class="sm-h">Build Your Plate</h2>
     <div class="opts reveal">
@@ -643,6 +643,7 @@ def lunch():
       {opt("Sides", L['sides'])}
       {opt("Vegan Option", L['vegan'], f'<div class="big">{money(L["vegan_price"])}</div>')}
     </div>
+    <figure class="dish reveal"><div class="frame">{img("red-beans-rice-greens-sides", "Bowls of red beans and rice and greens", sizes="(max-width: 860px) 100vw, 640px", w=850, h=550)}</div><figcaption>Sides · Red Beans and Rice, Greens</figcaption></figure>
     {flyer_btn("flyer-lunch.webp", "Lunch Special flyer", "View the lunch flyer")}
     <h2 class="sm-h">How Lunch Works</h2>
     <ol class="steps"><li>Come in Wednesday – Friday between 11AM and 3PM.</li><li>Choose your meat, or the vegan option.</li><li>Pick your sides.</li><li>Stay for <a href="/faq/">happy hour</a> from 11AM – 1PM.</li></ol>
@@ -656,7 +657,7 @@ def lunch():
   </div>
 </section>
 {related([("Dinner Menu", "/menu/dinner/", "Wed – Fri, 3:30PM – 8PM"), ("Taco Tuesday", "/events/taco-tuesday/", "Taco flight 11AM – 3PM"), ("What Is Soul Food?", "/guides/what-is-soul-food/", "Guide")])}
-{cta("mac-and-cheese-fried-chicken-plate")}"""
+{cta("fried-wings-greens-red-beans-rice")}"""
     nodes = [{"@type": "Menu", "@id": SITE + "/menu/lunch/#menu", "name": "Lunch Special", "url": SITE + "/menu/lunch/",
               "hasMenuSection": [
                   {"@type": "MenuSection", "name": "Lunch Special plate", "description": "Choose a meat and sides. Meats: " + ", ".join(L["meats"]) + ". Sides: " + ", ".join(L["sides"]) + ".",
@@ -667,8 +668,8 @@ def lunch():
     page("/menu/lunch/", title="Lunch Special $17.99, North Minneapolis | Memoire's",
          desc="Memoire's $17.99 lunch special in North Minneapolis, Wed–Fri 11AM–3PM: catfish, wings or blackened chicken or salmon with two sides. The vegan plate is $16.",
          h1="Lunch Special in North Minneapolis", crumbs=[("Home", "/"), ("Menu", "/menu/"), ("Lunch", "/menu/lunch/")],
-         body=body, banner_img="fried-chicken-with-rice", og="og-mac-and-cheese-fried-chicken-plate.jpg",
-         og_alt="Fried chicken and mac and cheese lunch plate", extra_nodes=nodes,
+         body=body, banner_img="fried-chicken-with-rice", og="og-fried-wings-greens-red-beans-rice.jpg",
+         og_alt="Fried chicken wings with greens and red beans and rice", extra_nodes=nodes,
          lead="Wednesday – Friday · 11AM – 3PM")
 
 
@@ -682,6 +683,10 @@ def dinner():
     <div class="reveal">{items_html(Dn['items'])}</div>
     <h2 class="sm-h">Choose Your Meat &amp; Sides</h2>
     <div class="opts reveal">{opt("Meats", Dn['meats'])}{opt("Sides", Dn['sides'])}</div>
+    <div class="split dishes reveal">
+      <figure class="dish"><div class="frame">{img("fried-wings-greens-red-beans-rice", "Chicken wings with greens and red beans and rice", w=850, h=550)}</div><figcaption>The Memoire’s · Chicken Wings, Greens, Red Beans and Rice</figcaption></figure>
+      <figure class="dish"><div class="frame">{img("red-beans-rice-greens-sides", "Bowls of red beans and rice and greens", w=850, h=550)}</div><figcaption>Sides · Red Beans and Rice, Greens</figcaption></figure>
+    </div>
     <p>Lighter midday appetite? The <a href="/menu/lunch/">lunch special</a> runs 11AM – 3PM. Planning a group dinner? Our <a href="/event-center/">event center</a> can host it.</p>
     {flyer_btn("flyer-dinner.webp", "Dinner menu flyer", "View the dinner flyer")}
     {kw_table([
@@ -706,7 +711,7 @@ def dinner():
 
 def events_hub():
     cards = "".join([
-        card("Brunch Vibez", "Saturdays", "11AM – 6PM", "Chicken &amp; waffles, grits and steak &amp; eggs. Reservations required.", "From $12", "chicken-and-waffles", "Chicken and waffles", "/events/brunch-vibez/"),
+        card("Brunch Vibez", "Saturdays", "11AM – 6PM", "Chicken &amp; waffles, grits and steak &amp; eggs. Reservations required.", "From $12", "steak-eggs-texas-toast", "Steak and eggs with Texas toast", "/events/brunch-vibez/"),
         card("Taco Tuesday", "Tuesdays", "11AM – 8PM", "Beef birria tacos, quesadillas, egg rolls and pizza with consomé.", "From $14", "beef-birria-tacos", "Birria tacos", "/events/taco-tuesday/"),
         card("Soulfull Sunday", "Sundays", "Buffet", "A soul food buffet with a drink and 3 trips through the line.", "$" + M["sunday"]["price"], "soul-food-plate-greens-mashed-potatoes", "Soul food buffet plate", "/events/soulfull-sunday/"),
         card("Grand Opening", "Nov 10 – 15", "Six days", "Tacos &amp; tequila, live music, karaoke, a 90’s party and the big game.", "", "memoires-bar-open-kitchen", "Memoire’s bar", "/events/grand-opening/"),
@@ -753,6 +758,10 @@ def brunch():
     <div class="reveal">{items_html(Br['items'])}</div>
     <p class="note">* Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness.</p>
     {flyer_btn("flyer-brunch-vibez.webp", "Brunch Vibez flyer", "View the Brunch Vibez flyer")}
+    <div class="split dishes reveal">
+      <figure class="dish"><div class="frame">{img("steak-eggs-texas-toast", "Steak and eggs with Texas toast", w=850, h=550)}</div><figcaption>Steak &amp; Egg · 2 eggs any style, steak &amp; Texas toast</figcaption></figure>
+      <figure class="dish"><div class="frame">{img("fried-catfish-shrimp-mac-greens-yams", "Fried catfish and shrimp with mac and cheese, greens and yams", w=850, h=550)}</div><figcaption>That’s a Vibe · 2 meats &amp; 3 sides</figcaption></figure>
+    </div>
     <h2 class="sm-h">How to Book Brunch</h2>
     <ol class="steps"><li>Call <a href="{TEL}">{PHONE}</a> to reserve. Brunch is by reservation only.</li><li>Arrive any time from 11AM to 6PM on Saturday.</li><li>Big group or birthday? Ask about the <a href="/event-center/">event center</a> or send a <a href="/event-center/rental/">rental request</a>.</li></ol>
     {kw_table([
