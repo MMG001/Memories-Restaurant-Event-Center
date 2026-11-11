@@ -107,7 +107,7 @@ def business_node():
         "address": {"@type": "PostalAddress", "streetAddress": ADDR1, "addressLocality": B["city"],
                     "addressRegion": B["region"], "postalCode": B["postal"], "addressCountry": B["country"]},
         "geo": {"@type": "GeoCoordinates", "latitude": B["geo"]["lat"], "longitude": B["geo"]["lng"]},
-        "hasMap": B["directions"],
+        "hasMap": B["google_profile"],
         "openingHoursSpecification": hrs,
         "servesCuisine": B["cuisine"],
         "acceptsReservations": True,
@@ -264,7 +264,7 @@ def footer():
     <div>
       <img class="foot-logo" src="{A('assets/img/logo-light.webp')}" alt="{e(NAME)} logo" width="1000" height="387" loading="lazy">
       <p>Soul food restaurant and event center in {B['neighborhood']}.</p>
-      <p class="nap"><strong>{amp(NAME)}</strong><br>{ADDR1}<br>{ADDR2}<br><a href="{TEL}">{PHONE}</a></p>
+      <p class="nap"><strong>{amp(NAME)}</strong><br><a href="{B['google_profile']}" rel="noopener" target="_blank">{ADDR1}<br>{ADDR2}</a><br><a href="{TEL}">{PHONE}</a></p>
     </div>
     <div>
       <h2 class="fh">Hours</h2>
@@ -515,7 +515,7 @@ def home():
     <div class="reveal">
       <p class="eyebrow">Find Us</p>
       <h2>Visit {amp(SHORT)} in North Minneapolis</h2>
-      <p class="nap-line"><strong>{amp(NAME)}</strong><br>{ADDR1}, {ADDR2}<br><a href="{TEL}">{PHONE}</a></p>
+      <p class="nap-line"><strong>{amp(NAME)}</strong><br><a href="{B['google_profile']}" rel="noopener" target="_blank">{ADDR1}, {ADDR2}</a><br><a href="{TEL}">{PHONE}</a></p>
       {hours_table()}
       <div class="btn-row"><a class="btn ghost" href="/visit/">Map &amp; Directions</a><a class="btn ghost" href="/contact/">Contact</a></div>
     </div>
@@ -1026,7 +1026,7 @@ def visit():
     <div class="reveal">
       <p class="lead"><strong>{amp(NAME)}</strong> is at {ADDR1} in {B['neighborhood']}. This page is for first-time guests planning how to get here and when we’re open.</p>
       <h2>Address</h2>
-      <p class="nap-line"><strong>{amp(NAME)}</strong><br>{ADDR1}<br>{ADDR2}<br><a href="{TEL}">{PHONE}</a></p>
+      <p class="nap-line"><strong>{amp(NAME)}</strong><br><a href="{B['google_profile']}" rel="noopener" target="_blank">{ADDR1}<br>{ADDR2}</a><br><a href="{TEL}">{PHONE}</a></p>
       <div class="btn-row"><a class="btn" href="{B['directions']}" rel="noopener">Get Directions</a><a class="btn ghost" href="{TEL}">Call {PHONE}</a></div>
       <h2>Hours</h2>
       {hours_table()}
@@ -1054,7 +1054,8 @@ def contact():
     <div class="reveal">
       <p class="lead">Contact {amp(NAME)} in North Minneapolis for reservations, questions or private events. Calling is the fastest way to book a table.</p>
       <p><a class="phone-big" href="{TEL}">{PHONE}</a></p>
-      <p class="nap-line"><strong>{amp(NAME)}</strong><br>{ADDR1}<br>{ADDR2}<br>Email: <a href="mailto:{D['business']['email']}">{D['business']['email']}</a></p>
+      <p class="nap-line"><strong>{amp(NAME)}</strong><br><a href="{B['google_profile']}" rel="noopener" target="_blank">{ADDR1}<br>{ADDR2}</a><br>Email: <a href="mailto:{D['business']['email']}">{D['business']['email']}</a></p>
+      <p><a class="btn ghost" href="{B['google_profile']}" rel="noopener" target="_blank">Find Us on Google</a></p>
       {hours_table()}
       <p>Planning an event? Use the <a href="/event-center/rental/">rental request form</a>. Quick answers are on the <a href="/faq/">FAQ</a>, and directions are on the <a href="/visit/">visit page</a>. Hungry now? See <a href="/menu/lunch/">lunch</a>, <a href="/menu/dinner/">dinner</a> and <a href="/events/">this week’s events</a>.</p>
       {reviewed()}
