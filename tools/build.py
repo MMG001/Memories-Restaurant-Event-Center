@@ -425,8 +425,8 @@ def home():
     cards = "".join([
         card("Taco Tuesday", "Tuesdays", "11AM – 8PM", "Beef birria tacos, quesadillas, egg rolls and birria pizza, all with consomé &amp; limes.", "From $14", "shrimp-tacos-egg-roll", "Shrimp tacos with an egg roll and lime", "/events/taco-tuesday/"),
         card("Lunch Special", "Wed – Fri", "11AM – 3PM", "Choose a meat and sides: catfish, wings, blackened chicken or blackened salmon.", money(M["lunch"]["price"]), "fried-wings-greens-red-beans-rice", "Fried chicken wings with greens and red beans and rice", "/menu/lunch/"),
-        card("Dinner Menu", "Wed – Fri", "3:30PM – 8PM", "NY strip steaks, Cajun salmon medley, soul food plates and vegan dishes.", "From $18", "grilled-ny-strip-steak", "Grilled NY strip steak with vegetables", "/menu/dinner/"),
-        card("Brunch Vibez", "Saturdays", "11AM – 6PM", "Chicken &amp; waffles, shrimp &amp; grits, steak &amp; eggs and the Boss Brunch.", "From $22", "steak-eggs-texas-toast", "Steak and eggs with Texas toast", "/events/brunch-vibez/"),
+        card("Dinner Menu", "Wed – Fri", "3:30PM – 8PM", "NY strip steaks, Cajun salmon medley, soul food plates and vegan dishes.", "From $18", "steak-eggs-texas-toast", "Grilled steak with eggs and Texas toast", "/menu/dinner/"),
+        card("Brunch Vibez", "Saturdays", "11AM – 6PM", "Chicken &amp; waffles, shrimp &amp; grits, steak &amp; eggs and the Boss Brunch.", "From $22", "catfish-grits-texas-toast", "Fried catfish over grits with Texas toast, cheese and green onions", "/events/brunch-vibez/"),
         card("Soulfull Sunday", "Sundays", "Soul Food Buffet", "Includes a drink &amp; going through the buffet 3 times.", "$" + M["sunday"]["price"], "soul-food-plate-greens-mashed-potatoes", "Soul food plate with greens and mashed potatoes", "/events/soulfull-sunday/"),
     ])
     hero = f"""<section class="hero">
