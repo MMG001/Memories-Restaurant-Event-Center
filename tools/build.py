@@ -422,7 +422,7 @@ def go_rows(with_ids=False):
 # ================================================================ PAGES
 def home():
     cards = "".join([
-        card("Taco Tuesday", "Tuesdays", "11AM – 8PM", "Beef birria tacos, quesadillas, egg rolls and birria pizza, all with consomé &amp; limes.", "From $14", "beef-birria-tacos", "Beef birria tacos with lime", "/events/taco-tuesday/"),
+        card("Taco Tuesday", "Tuesdays", "11AM – 8PM", "Beef birria tacos, quesadillas, egg rolls and birria pizza, all with consomé &amp; limes.", "From $14", "shrimp-tacos-egg-roll", "Shrimp tacos with an egg roll and lime", "/events/taco-tuesday/"),
         card("Lunch Special", "Wed – Fri", "11AM – 3PM", "Choose a meat and sides: catfish, wings, blackened chicken or blackened salmon.", money(M["lunch"]["price"]), "fried-wings-greens-red-beans-rice", "Fried chicken wings with greens and red beans and rice", "/menu/lunch/"),
         card("Dinner Menu", "Wed – Fri", "3:30PM – 8PM", "NY strip steaks, Cajun salmon medley, soul food plates and vegan dishes.", "From $18", "grilled-ny-strip-steak", "Grilled NY strip steak with vegetables", "/menu/dinner/"),
         card("Brunch Vibez", "Saturdays", "11AM – 6PM", "Chicken &amp; waffles, shrimp &amp; grits, steak &amp; eggs and the Boss Brunch.", "From $22", "steak-eggs-texas-toast", "Steak and eggs with Texas toast", "/events/brunch-vibez/"),
@@ -594,7 +594,7 @@ def menu_hub():
         card("Lunch Special", "Wed – Fri", "11AM – 3PM", "Pick a meat and sides for a $17.99 plate, or the $16 vegan option.", money(M["lunch"]["price"]), "fried-wings-greens-red-beans-rice", "Fried chicken wings with greens and red beans and rice", "/menu/lunch/"),
         card("Dinner Menu", "Wed – Fri", "3:30PM – 8PM", "NY strip steaks, Salmon Medley, The Memoire’s plate and vegan skillets.", "From $18", "grilled-ny-strip-steak", "Grilled NY strip steak", "/menu/dinner/"),
         card("Brunch Vibez", "Saturdays", "11AM – 6PM", "Chicken &amp; waffles, grits, steak &amp; eggs and a kids meal.", "From $12", "steak-eggs-texas-toast", "Steak and eggs with Texas toast", "/events/brunch-vibez/"),
-        card("Taco Tuesday", "Tuesdays", "11AM – 8PM", "Beef birria tacos, quesadillas, egg rolls and birria pizza.", "From $14", "beef-birria-tacos", "Birria tacos", "/events/taco-tuesday/"),
+        card("Taco Tuesday", "Tuesdays", "11AM – 8PM", "Beef birria tacos, quesadillas, egg rolls and birria pizza.", "From $14", "shrimp-tacos-egg-roll", "Shrimp tacos with an egg roll and lime", "/events/taco-tuesday/"),
         card("Soulfull Sunday", "Sundays", "Buffet", "Soul food buffet with a drink and 3 trips through the line.", "$" + M["sunday"]["price"], "soul-food-plate-greens-mashed-potatoes", "Soul food plate", "/events/soulfull-sunday/"),
     ])
     body = f"""
@@ -644,7 +644,10 @@ def lunch():
       {opt("Sides", L['sides'])}
       {opt("Vegan Option", L['vegan'], f'<div class="big">{money(L["vegan_price"])}</div>')}
     </div>
-    <figure class="dish reveal"><div class="frame">{img("red-beans-rice-greens-sides", "Bowls of red beans and rice and greens", sizes="(max-width: 860px) 100vw, 640px", w=850, h=550)}</div><figcaption>Sides · Red Beans and Rice, Greens</figcaption></figure>
+    <div class="split dishes reveal">
+      <figure class="dish"><div class="frame">{img("fried-catfish-mac-cheese-greens", "Fried catfish with mac and cheese and greens", w=1100, h=1338)}</div><figcaption>Lunch Special · Catfish, Mac &amp; Cheese, Greens</figcaption></figure>
+      <figure class="dish"><div class="frame">{img("red-beans-rice-greens-sides", "Bowls of red beans and rice and greens", w=850, h=550)}</div><figcaption>Sides · Red Beans and Rice, Greens</figcaption></figure>
+    </div>
     {flyer_btn("flyer-lunch.webp", "Lunch Special flyer", "View the lunch flyer")}
     <h2 class="sm-h">How Lunch Works</h2>
     <ol class="steps"><li>Come in Wednesday – Friday between 11AM and 3PM.</li><li>Choose your meat, or the vegan option.</li><li>Pick your sides.</li><li>Stay for <a href="/faq/">happy hour</a> from 11AM – 1PM.</li></ol>
@@ -684,8 +687,9 @@ def dinner():
     <div class="reveal">{items_html(Dn['items'])}</div>
     <h2 class="sm-h">Choose Your Meat &amp; Sides</h2>
     <div class="opts reveal">{opt("Meats", Dn['meats'])}{opt("Sides", Dn['sides'])}</div>
-    <div class="split dishes reveal">
+    <div class="dishes3 reveal">
       <figure class="dish"><div class="frame">{img("fried-wings-greens-red-beans-rice", "Chicken wings with greens and red beans and rice", w=850, h=550)}</div><figcaption>The Memoire’s · Chicken Wings, Greens, Red Beans and Rice</figcaption></figure>
+      <figure class="dish"><div class="frame">{img("fried-catfish-mac-cheese-greens", "Fried catfish with mac and cheese and greens", w=1100, h=1338)}</div><figcaption>The Memoire’s · Catfish, Mac &amp; Cheese, Greens</figcaption></figure>
       <figure class="dish"><div class="frame">{img("red-beans-rice-greens-sides", "Bowls of red beans and rice and greens", w=850, h=550)}</div><figcaption>Sides · Red Beans and Rice, Greens</figcaption></figure>
     </div>
     <p>Lighter midday appetite? The <a href="/menu/lunch/">lunch special</a> runs 11AM – 3PM. Planning a group dinner? Our <a href="/event-center/">event center</a> can host it.</p>
@@ -713,7 +717,7 @@ def dinner():
 def events_hub():
     cards = "".join([
         card("Brunch Vibez", "Saturdays", "11AM – 6PM", "Chicken &amp; waffles, grits and steak &amp; eggs. Reservations required.", "From $12", "steak-eggs-texas-toast", "Steak and eggs with Texas toast", "/events/brunch-vibez/"),
-        card("Taco Tuesday", "Tuesdays", "11AM – 8PM", "Beef birria tacos, quesadillas, egg rolls and pizza with consomé.", "From $14", "beef-birria-tacos", "Birria tacos", "/events/taco-tuesday/"),
+        card("Taco Tuesday", "Tuesdays", "11AM – 8PM", "Beef birria tacos, quesadillas, egg rolls and pizza with consomé.", "From $14", "shrimp-tacos-egg-roll", "Shrimp tacos with an egg roll and lime", "/events/taco-tuesday/"),
         card("Soulfull Sunday", "Sundays", "Buffet", "A soul food buffet with a drink and 3 trips through the line.", "$" + M["sunday"]["price"], "soul-food-plate-greens-mashed-potatoes", "Soul food buffet plate", "/events/soulfull-sunday/"),
         card("Grand Opening", "Nov 10 – 15", "Six days", "Tacos &amp; tequila, live music, karaoke, a 90’s party and the big game.", "", "memoires-bar-open-kitchen", "Memoire’s bar", "/events/grand-opening/"),
     ])
@@ -759,8 +763,9 @@ def brunch():
     <div class="reveal">{items_html(Br['items'])}</div>
     <p class="note">* Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness.</p>
     {flyer_btn("flyer-brunch-vibez.webp", "Brunch Vibez flyer", "View the Brunch Vibez flyer")}
-    <div class="split dishes reveal">
+    <div class="dishes3 reveal">
       <figure class="dish"><div class="frame">{img("steak-eggs-texas-toast", "Steak and eggs with Texas toast", w=850, h=550)}</div><figcaption>Steak &amp; Egg · 2 eggs any style, steak &amp; Texas toast</figcaption></figure>
+      <figure class="dish"><div class="frame">{img("catfish-grits-texas-toast", "Fried catfish over grits with Texas toast, cheese and green onions", w=1100, h=1336)}</div><figcaption>Catfish &amp; Grits</figcaption></figure>
       <figure class="dish"><div class="frame">{img("fried-catfish-shrimp-mac-greens-yams", "Fried catfish and shrimp with mac and cheese, greens and yams", w=850, h=550)}</div><figcaption>That’s a Vibe · 2 meats &amp; 3 sides</figcaption></figure>
     </div>
     <h2 class="sm-h">How to Book Brunch</h2>
@@ -799,7 +804,7 @@ def taco():
         <p><span class="when">{T['when']}</span></p>
         <p>New to birria? Read <a href="/guides/what-is-birria/">what birria and consomé are</a>. Stop by for <a href="/faq/">happy hour</a> too, 11AM – 1PM and 6PM – 8PM.</p>
       </div>
-      <div class="frame">{img("beef-birria-tacos", "Two beef birria tacos with lime")}</div>
+      <figure class="dish"><div class="frame">{img("shrimp-tacos-egg-roll", "Two shrimp tacos with slaw and pico, an egg roll, lime and sauce", w=1050, h=1400)}</div><figcaption>Shrimp Tacos &amp; Egg Roll</figcaption></figure>
     </div>
     <h2 class="sm-h">Birria Menu</h2>
     <div class="reveal">{items_html(T['items'])}</div>
@@ -819,10 +824,10 @@ def taco():
   </div>
 </section>
 {related([("Lunch Special", "/menu/lunch/", "Wed – Fri"), ("Brunch Vibez", "/events/brunch-vibez/", "Saturdays"), ("What Is Birria?", "/guides/what-is-birria/", "Guide")])}
-{cta("beef-birria-tacos")}"""
+{cta("shrimp-tacos-egg-roll")}"""
     nodes = [weekly_event("Taco Tuesday", SITE + "/events/taco-tuesday/", "Tuesday", "11:00", "20:00",
                           "All-day birria at Memoire's: tacos, quesadillas, egg rolls and birria pizza with consomé.",
-                          SITE + "/assets/img/og-beef-birria-tacos.jpg"),
+                          SITE + "/assets/img/og-shrimp-tacos-egg-roll.jpg"),
              {"@type": "Menu", "@id": SITE + "/events/taco-tuesday/#menu", "name": "Taco Tuesday menu",
               "hasMenuSection": [menu_section("Birria", T["items"] + [
                   {"name": "Taco Flight (4 tacos, 11AM – 3PM)", "price": T["flight"]["price"], "desc": ""},
@@ -830,7 +835,7 @@ def taco():
     page("/events/taco-tuesday/", title="Taco Tuesday Birria, North Minneapolis | Memoire's",
          desc="Taco Tuesday at Memoire's, North Minneapolis, 11AM–8PM: beef birria tacos with consomé, quesadillas, egg rolls and birria pizza. Taco flight $15 until 3PM.",
          h1="Taco Tuesday Birria in North Minneapolis", crumbs=[("Home", "/"), ("Events", "/events/"), ("Taco Tuesday", "/events/taco-tuesday/")],
-         body=body, banner_img="shredded-beef-tacos", og="og-beef-birria-tacos.jpg", og_alt="Beef birria tacos with lime",
+         body=body, banner_img="shredded-beef-tacos", og="og-shrimp-tacos-egg-roll.jpg", og_alt="Shrimp tacos with an egg roll and lime",
          extra_nodes=nodes, lead="Every Tuesday · 11AM – 8PM")
 
 
