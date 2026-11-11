@@ -1,7 +1,7 @@
 {
   "_note": "Single source of truth. Every page renders business facts from this file. Edit here, run python3 tools/build.py, commit.",
-  "site_url": "https://memories-restaurant-event-center.pages.dev",
-  "indexable": false,
+  "site_url": "https://memoiresmpls.com",
+  "indexable": true,
   "updated": "2026-11-10",
   "updated_display": "November 10, 2026",
   "business": {
@@ -101,7 +101,6 @@
   },
   "event_types": ["Birthdays", "Weddings & Receptions", "Bridal & Baby Showers", "Anniversaries", "Graduations", "Family Reunions", "Repasts & Celebrations of Life", "Corporate Events", "Holiday Parties", "Fundraisers", "Networking Mixers", "Private Dinners"],
   "need_from_client": [
-    "Custom domain (the site stays noindex on pages.dev until it has one)",
     "Inbox for form submissions + confirmation emails",
     "Exact Google Business Profile name, rating and review count; 3+ real reviews to quote",
     "Sunday buffet hours; whether Monday is closed",
