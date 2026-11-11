@@ -303,6 +303,7 @@ def footer():
       <a href="/privacy-policy/">Privacy Policy</a>
       <a href="/equal-opportunity-employer/">Equal Opportunity Employer</a>
       <a href="/terms/">Terms &amp; Conditions</a>
+      <a href="/sitemap/">Sitemap</a>
     </nav>
   </div>
 </footer>"""
@@ -1232,6 +1233,23 @@ def legal_pages():
 <h2>Contact</h2><p>Call <a href="{TEL}">{PHONE}</a> or visit {ADDR1}, {ADDR2}. Read our <a href="/privacy-policy/">privacy policy</a> or <a href="/contact/">contact us</a>.</p>""")
 
 
+def sitemap_page():
+    groups = [
+        ("Main", ["/", "/about/", "/gallery/", "/visit/", "/contact/", "/faq/"]),
+        ("Menus", ["/menu/", "/menu/lunch/", "/menu/dinner/"]),
+        ("Weekly Events", ["/events/", "/events/taco-tuesday/", "/events/brunch-vibez/", "/events/soulfull-sunday/", "/events/grand-opening/"]),
+        ("Event Center", ["/event-center/", "/event-center/rental/"]),
+        ("Guides", [u for u in PAGES if u.startswith("/guides/")]),
+        ("Policies", ["/privacy-policy/", "/terms/", "/equal-opportunity-employer/"]),
+    ]
+    inner = "".join(
+        f"<h2>{g}</h2><ul>" + "".join(f'<li><a href="{u}">{e(PAGES[u]["h1"])}</a></li>' for u in urls if u in PAGES) + "</ul>"
+        for g, urls in groups)
+    legal("/sitemap/", "Sitemap | Memoire's Restaurant & Event Center", "Sitemap for Memoire’s, Minneapolis",
+          "Sitemap for Memoire's Restaurant & Event Center in Minneapolis: every page on the site, including menus, weekly events, the event center, guides and policies.",
+          f"<p>Every page on the {amp(SHORT)} website, grouped by section.</p>" + inner)
+
+
 def not_found():
     body = '<section><div class="wrap center"><p class="lead center-lead">The page you’re looking for has moved. Try the <a href="/menu/">menu</a>, <a href="/events/">events</a> or <a href="/contact/">contact</a> pages.</p><p><a class="btn" href="/">Back Home</a></p></div></section>'
     page("/404.html", title="Page Not Found | Memoire's", desc="This page could not be found on the Memoire's Restaurant & Event Center website. Visit the menu, events or contact pages to find what you need in Minneapolis.",
@@ -1337,7 +1355,7 @@ if __name__ == "__main__":
                 "privacy-policy.html", "terms.html", "equal-opportunity-employer.html"]:
         (ROOT / old).unlink(missing_ok=True)
     home(); about(); menu_hub(); lunch(); dinner(); events_hub(); brunch(); taco(); sunday(); grand_opening()
-    event_center(); rental(); gallery(); visit(); contact(); faq(); guides(); legal_pages(); not_found()
+    event_center(); rental(); gallery(); visit(); contact(); faq(); guides(); legal_pages(); sitemap_page(); not_found()
     site_files()
     errs = qa()
     print(f"Built {len(PAGES)} pages.")
