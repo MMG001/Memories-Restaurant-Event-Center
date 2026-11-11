@@ -5,7 +5,7 @@
   /* Where form inquiries go. Set this to the restaurant's inbox
      (e.g. "events@yourdomain.com") and every form will open the
      visitor's email app pre-filled and addressed to it. */
-  var INQUIRY_EMAIL = "";
+  var INQUIRY_EMAIL = "jspromo.memoires@gmail.com";
   var PHONE = "612.223.3679";
 
   var body = document.body;

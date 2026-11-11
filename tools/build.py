@@ -101,6 +101,7 @@ def business_node():
         "name": NAME,
         "url": SITE + "/",
         "telephone": B["phone_e164"],
+        "email": B["email"],
         "image": SITE + "/assets/img/og-memoires-exterior-storefront-n-44th-ave.jpg",
         "logo": SITE + "/assets/img/logo-light-600.png",
         "address": {"@type": "PostalAddress", "streetAddress": ADDR1, "addressLocality": B["city"],
@@ -1069,7 +1070,7 @@ def contact():
     <div class="reveal">
       <p class="lead">Contact {amp(NAME)} in North Minneapolis for reservations, questions or private events. Calling is the fastest way to book a table.</p>
       <p><a class="phone-big" href="{TEL}">{PHONE}</a></p>
-      <p class="nap-line"><strong>{amp(NAME)}</strong><br>{ADDR1}<br>{ADDR2}</p>
+      <p class="nap-line"><strong>{amp(NAME)}</strong><br>{ADDR1}<br>{ADDR2}<br>Email: <a href="mailto:{D['business']['email']}">{D['business']['email']}</a></p>
       {hours_table()}
       <p>Planning an event? Use the <a href="/event-center/rental/">rental request form</a>. Quick answers are on the <a href="/faq/">FAQ</a>, and directions are on the <a href="/visit/">visit page</a>. Hungry now? See <a href="/menu/lunch/">lunch</a>, <a href="/menu/dinner/">dinner</a> and <a href="/events/">this week’s events</a>.</p>
       {reviewed()}
