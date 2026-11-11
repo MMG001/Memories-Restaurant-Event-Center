@@ -489,7 +489,7 @@ figure.dish figcaption{padding-top:26px}
 .cog-wrap .cog-form{background:transparent!important;color:var(--text);font-family:var(--sans);font-size:1rem;max-width:none}
 .cog-wrap .cog-form .cog-form__container,.cog-wrap .cog-form .cog-wrapper{background:transparent;padding-left:0;padding-right:0;max-width:none}
 .cog-wrap .cog-header{display:none}
-.cog-wrap .cog-form .cog-label{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;padding:0}
+.cog-wrap .cog-form .cog-label{display:block;font-family:var(--sans);font-size:.7rem!important;font-weight:500!important;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)!important;margin-bottom:8px;padding:0}
 .cog-wrap .cog-form .cog-asterisk{color:var(--red-bright)}
 .cog-wrap .cog-form input.el-input__inner,.cog-wrap .cog-form select.el-input__inner,.cog-wrap .cog-form textarea.el-textarea__inner{width:100%;height:auto;background-color:#131313;border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:0;padding:.9em 1em;font-family:var(--sans);font-size:1rem;font-weight:300;line-height:1.4;box-shadow:none}
 .cog-wrap .cog-form select.el-input__inner{padding-right:2.6em}
