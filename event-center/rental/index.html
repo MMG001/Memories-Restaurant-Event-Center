@@ -27,7 +27,7 @@
 <link rel="apple-touch-icon" href="/assets/img/favicon.png?v=f962fa5b">
 <link rel="preload" href="/assets/fonts/outfit-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/playfair-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=531dc0fa">
+<link rel="stylesheet" href="/assets/css/site.css?v=a77b8e58">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Restaurant","EventVenue"],"@id":"https://memoiresmpls.com/#business","name":"Memoire's Restaurant & Event Center","url":"https://memoiresmpls.com/","telephone":"+16122233679","email":"jspromo.memoires@gmail.com","image":"https://memoiresmpls.com/assets/img/og-memoires-exterior-storefront-n-44th-ave.jpg","logo":"https://memoiresmpls.com/assets/img/logo-light-600.png","address":{"@type":"PostalAddress","streetAddress":"2201 N 44th Ave","addressLocality":"Minneapolis","addressRegion":"MN","postalCode":"55412","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":45.0353056,"longitude":-93.3088256},"hasMap":"https://www.google.com/maps/dir/?api=1&destination=2201+N+44th+Ave,+Minneapolis,+MN+55412","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday"],"opens":"11:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday","Friday"],"opens":"11:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"11:00","closes":"18:00"}],"servesCuisine":["Soul food","Southern","Birria"],"acceptsReservations":true,"hasMenu":"https://memoiresmpls.com/menu/","areaServed":[{"@type":"City","name":"Minneapolis","sameAs":"https://www.wikidata.org/wiki/Q36091"},{"@type":"State","name":"Minnesota"}],"knowsAbout":["Soul food","Birria","Brunch","Private event hosting","Event catering"],"potentialAction":[{"@type":"ReserveAction","target":{"@type":"EntryPoint","urlTemplate":"tel:+16122233679"}},{"@type":"CommunicateAction","name":"Event center rental request","target":{"@type":"EntryPoint","urlTemplate":"https://memoiresmpls.com/event-center/rental/"}}]},{"@type":"WebSite","@id":"https://memoiresmpls.com/#website","url":"https://memoiresmpls.com/","name":"Memoire's Restaurant & Event Center","publisher":{"@id":"https://memoiresmpls.com/#business"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://memoiresmpls.com/event-center/rental/#webpage","url":"https://memoiresmpls.com/event-center/rental/","name":"Event Center Rental Request, Minneapolis | Memoire's","description":"Request a date at Memoire's event center in North Minneapolis. Share your event type, date and guests, and our team replies with availability and pricing.","isPartOf":{"@id":"https://memoiresmpls.com/#website"},"about":{"@id":"https://memoiresmpls.com/#business"},"inLanguage":"en-US","dateModified":"2026-11-10","primaryImageOfPage":{"@type":"ImageObject","url":"https://memoiresmpls.com/assets/img/og-memoires-event-space-windows.jpg","width":1200,"height":630},"breadcrumb":{"@id":"https://memoiresmpls.com/event-center/rental/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://memoiresmpls.com/event-center/rental/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://memoiresmpls.com/"},{"@type":"ListItem","position":2,"name":"Event Center","item":"https://memoiresmpls.com/event-center/"},{"@type":"ListItem","position":3,"name":"Rental","item":"https://memoiresmpls.com/event-center/rental/"}]}]}</script>
 </head>
 <body>
@@ -55,32 +55,11 @@
 <section id="rental">
   <div class="narrow-c">
     <p class="lead reveal">Use this <strong>event center rental request</strong> to check dates at Memoire's in North Minneapolis. It’s for anyone planning a party, reception, repast or business event. We reply with availability and pricing. Prefer the phone? Call <a href="tel:+16122233679">612.223.3679</a>.</p>
-    <form class="form reveal" data-inquiry="Event Center Rental Request" novalidate>
-      <div class="hp" aria-hidden="true"><label for="r-web">Website</label><input id="r-web" type="text" name="website" tabindex="-1" autocomplete="off"></div>
-      <div class="grid2">
-        <div><label for="r-name">Full Name <span class="req">*</span></label><input id="r-name" name="Name" required autocomplete="name"></div>
-        <div><label for="r-phone">Phone <span class="req">*</span></label><input id="r-phone" name="Phone" type="tel" required autocomplete="tel"></div>
-        <div class="full"><label for="r-email">Email <span class="req">*</span></label><input id="r-email" name="Email" type="email" required autocomplete="email"></div>
-        <div><label for="r-type">Event Type <span class="req">*</span></label><select id="r-type" name="Event Type" required><option value="">Select…</option><option>Birthdays</option><option>Weddings &amp; Receptions</option><option>Bridal &amp; Baby Showers</option><option>Anniversaries</option><option>Graduations</option><option>Family Reunions</option><option>Repasts &amp; Celebrations of Life</option><option>Corporate Events</option><option>Holiday Parties</option><option>Fundraisers</option><option>Networking Mixers</option><option>Private Dinners</option><option>Other</option></select></div>
-        <div><label for="r-date">Event Date <span class="req">*</span></label><input id="r-date" name="Event Date" type="date" required></div>
-        <div><label for="r-start">Start Time</label><input id="r-start" name="Start Time" type="time"></div>
-        <div><label for="r-end">End Time</label><input id="r-end" name="End Time" type="time"></div>
-        <div><label for="r-guests">Number of Guests <span class="req">*</span></label><input id="r-guests" name="Guests" type="number" min="1" required></div>
-        <div><label for="r-budget">Estimated Budget</label><select id="r-budget" name="Budget"><option value="">Select…</option><option>Under $1,000</option><option>$1,000 – $2,500</option><option>$2,500 – $5,000</option><option>$5,000+</option></select></div>
-        <fieldset class="full"><legend class="lg">Services Needed</legend>
-          <div class="checks">
-            <label for="s-food"><input id="s-food" type="checkbox" name="Services" value="Food / Catering" checked> Food / Catering</label>
-            <label for="s-dj"><input id="s-dj" type="checkbox" name="Services" value="DJ" checked> DJ</label>
-            <label for="s-bar"><input id="s-bar" type="checkbox" name="Services" value="Bar Service"> Bar Service</label>
-            <label for="s-decor"><input id="s-decor" type="checkbox" name="Services" value="Decor"> Decor</label>
-          </div>
-        </fieldset>
-        <div class="full"><label for="r-msg">Tell Us About Your Event</label><textarea id="r-msg" name="Details" placeholder="Theme, menu ideas, special requests…"></textarea></div>
-        <div class="full"><button class="btn wide" type="submit">Submit Rental Request</button>
-          <p class="fine">By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>. <span class="req">*</span> Required.</p></div>
-      </div>
-      <div class="form-msg" role="status" aria-live="polite"></div>
-    </form>
+    <div class="form cog-wrap reveal">
+      <script src="https://www.cognitoforms.com/f/seamless.js" data-key="e5A6hQ7FG0We3U_f7oZrng" data-form="271"></script>
+      <noscript><p>This form needs JavaScript. Call <a href="tel:+16122233679">612.223.3679</a> or email <a href="mailto:jspromo.memoires@gmail.com">jspromo.memoires@gmail.com</a>.</p></noscript>
+      <p class="fine">By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>. <span class="req">*</span> Required.</p>
+    </div>
     <p>Not sure what to ask for? Read <a href="/guides/planning-a-private-event/">how to plan a private event</a>, see the <a href="/event-center/">event center</a>, or browse the <a href="/menu/">menu</a>.</p>
     <p class="reviewed">Reviewed by the Memoire's team · Updated November 10, 2026</p>
   </div>

@@ -972,32 +972,11 @@ def rental():
 <section id="rental">
   <div class="narrow-c">
     <p class="lead reveal">Use this <strong>event center rental request</strong> to check dates at {amp(SHORT)} in North Minneapolis. It’s for anyone planning a party, reception, repast or business event. We reply with availability and pricing. Prefer the phone? Call <a href="{TEL}">{PHONE}</a>.</p>
-    <form class="form reveal" data-inquiry="Event Center Rental Request" novalidate>
-      <div class="hp" aria-hidden="true"><label for="r-web">Website</label><input id="r-web" type="text" name="website" tabindex="-1" autocomplete="off"></div>
-      <div class="grid2">
-        <div><label for="r-name">Full Name <span class="req">*</span></label><input id="r-name" name="Name" required autocomplete="name"></div>
-        <div><label for="r-phone">Phone <span class="req">*</span></label><input id="r-phone" name="Phone" type="tel" required autocomplete="tel"></div>
-        <div class="full"><label for="r-email">Email <span class="req">*</span></label><input id="r-email" name="Email" type="email" required autocomplete="email"></div>
-        <div><label for="r-type">Event Type <span class="req">*</span></label><select id="r-type" name="Event Type" required><option value="">Select…</option>{ev_opts}</select></div>
-        <div><label for="r-date">Event Date <span class="req">*</span></label><input id="r-date" name="Event Date" type="date" required></div>
-        <div><label for="r-start">Start Time</label><input id="r-start" name="Start Time" type="time"></div>
-        <div><label for="r-end">End Time</label><input id="r-end" name="End Time" type="time"></div>
-        <div><label for="r-guests">Number of Guests <span class="req">*</span></label><input id="r-guests" name="Guests" type="number" min="1" required></div>
-        <div><label for="r-budget">Estimated Budget</label><select id="r-budget" name="Budget"><option value="">Select…</option><option>Under $1,000</option><option>$1,000 – $2,500</option><option>$2,500 – $5,000</option><option>$5,000+</option></select></div>
-        <fieldset class="full"><legend class="lg">Services Needed</legend>
-          <div class="checks">
-            <label for="s-food"><input id="s-food" type="checkbox" name="Services" value="Food / Catering" checked> Food / Catering</label>
-            <label for="s-dj"><input id="s-dj" type="checkbox" name="Services" value="DJ" checked> DJ</label>
-            <label for="s-bar"><input id="s-bar" type="checkbox" name="Services" value="Bar Service"> Bar Service</label>
-            <label for="s-decor"><input id="s-decor" type="checkbox" name="Services" value="Decor"> Decor</label>
-          </div>
-        </fieldset>
-        <div class="full"><label for="r-msg">Tell Us About Your Event</label><textarea id="r-msg" name="Details" placeholder="Theme, menu ideas, special requests…"></textarea></div>
-        <div class="full"><button class="btn wide" type="submit">Submit Rental Request</button>
-          <p class="fine">By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>. <span class="req">*</span> Required.</p></div>
-      </div>
-      <div class="form-msg" role="status" aria-live="polite"></div>
-    </form>
+    <div class="form cog-wrap reveal">
+      <script src="https://www.cognitoforms.com/f/seamless.js" data-key="e5A6hQ7FG0We3U_f7oZrng" data-form="271"></script>
+      <noscript><p>This form needs JavaScript. Call <a href="{TEL}">{PHONE}</a> or email <a href="mailto:{D['business']['email']}">{D['business']['email']}</a>.</p></noscript>
+      <p class="fine">By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>. <span class="req">*</span> Required.</p>
+    </div>
     <p>Not sure what to ask for? Read <a href="/guides/planning-a-private-event/">how to plan a private event</a>, see the <a href="/event-center/">event center</a>, or browse the <a href="/menu/">menu</a>.</p>
     {reviewed()}
   </div>
@@ -1076,19 +1055,12 @@ def contact():
       {reviewed()}
     </div>
     <div class="reveal">
-      <form class="form" data-inquiry="Website Message" novalidate>
+      <div class="form cog-wrap">
         <h2 class="h3">Send a Message</h2>
-        <div class="hp" aria-hidden="true"><label for="c-web">Website</label><input id="c-web" type="text" name="website" tabindex="-1" autocomplete="off"></div>
-        <div class="grid2">
-          <div><label for="c-name">Name <span class="req">*</span></label><input id="c-name" name="Name" required autocomplete="name"></div>
-          <div><label for="c-phone">Phone</label><input id="c-phone" name="Phone" type="tel" autocomplete="tel"></div>
-          <div class="full"><label for="c-email">Email <span class="req">*</span></label><input id="c-email" name="Email" type="email" required autocomplete="email"></div>
-          <div class="full"><label for="c-topic">Topic</label><select id="c-topic" name="Topic"><option>General Question</option><option>Reservation</option><option>Private Event</option><option>Feedback</option><option>Careers</option></select></div>
-          <div class="full"><label for="c-msg">Message <span class="req">*</span></label><textarea id="c-msg" name="Message" required></textarea></div>
-          <div class="full"><button class="btn wide" type="submit">Send Message</button><p class="fine">By sending, you agree to our <a href="/privacy-policy/">Privacy Policy</a>.</p></div>
-        </div>
-        <div class="form-msg" role="status" aria-live="polite"></div>
-      </form>
+        <script src="https://www.cognitoforms.com/f/seamless.js" data-key="e5A6hQ7FG0We3U_f7oZrng" data-form="270"></script>
+        <noscript><p>This form needs JavaScript. Call <a href="{TEL}">{PHONE}</a> or email <a href="mailto:{D['business']['email']}">{D['business']['email']}</a>.</p></noscript>
+        <p class="fine">By sending, you agree to our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1231,7 +1203,7 @@ def legal_pages():
     legal("/privacy-policy/", "Privacy Policy | Memoire's Restaurant & Event Center", "Privacy Policy for Memoire’s, Minneapolis",
           "How Memoire's Restaurant & Event Center in Minneapolis handles information you send through this website, including the contact and event rental request forms.",
           f"""<p>{amp(NAME)} (“{amp(SHORT)},” “we,” “us”) respects your privacy. This policy explains what we collect through this website and how we use it.</p>
-<h2>Information we collect</h2><p>We collect only what you choose to send: your name, phone, email and event details when you use the <a href="/contact/">contact form</a> or <a href="/event-center/rental/">rental request</a>. Our hosting provider may record basic technical data such as browser type and pages visited.</p>
+<h2>Information we collect</h2><p>We collect only what you choose to send: your name, phone, email and event details when you use the <a href="/contact/">contact form</a> or <a href="/event-center/rental/">rental request</a>. Form submissions are processed by Cognito Forms and delivered to our inbox. Our hosting provider may record basic technical data such as browser type and pages visited.</p>
 <h2>How we use it</h2><ul><li>To answer questions, reservations and event inquiries.</li><li>To plan and provide the services you request.</li><li>To improve our website and guest experience.</li></ul>
 <h2>Sharing</h2><p>We do not sell your personal information. We share it only with providers who help run the website or our business, or when the law requires it.</p>
 <h2>Third-party services</h2><p>This site embeds Google Maps, which may collect data under Google’s own privacy policy.</p>

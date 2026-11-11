@@ -485,3 +485,26 @@ figure.dish figcaption{padding-top:26px}
 .split.dishes{margin:48px 0 28px;align-items:start}
 .split.dishes .sm-h{margin-top:0}
 .opts+figure.dish{margin:48px auto 0;max-width:640px}
+/* Cognito Forms (seamless embed, Chameleon field style) */
+.cog-wrap .cog-form{background:transparent!important;color:var(--text);font-family:var(--sans);font-size:1rem;max-width:none}
+.cog-wrap .cog-form .cog-form__container,.cog-wrap .cog-form .cog-wrapper{background:transparent;padding-left:0;padding-right:0;max-width:none}
+.cog-wrap .cog-header{display:none}
+.cog-wrap .cog-form .cog-label{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;padding:0}
+.cog-wrap .cog-form .cog-asterisk{color:var(--red-bright)}
+.cog-wrap .cog-form input.el-input__inner,.cog-wrap .cog-form select.el-input__inner,.cog-wrap .cog-form textarea.el-textarea__inner{width:100%;height:auto;background-color:#131313;border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:0;padding:.9em 1em;font-family:var(--sans);font-size:1rem;font-weight:300;line-height:1.4;box-shadow:none}
+.cog-wrap .cog-form select.el-input__inner{padding-right:2.6em}
+.cog-wrap .cog-form select.el-input__inner option{background:#131313;color:#fff}
+.cog-wrap .cog-form textarea.el-textarea__inner{min-height:140px}
+.cog-wrap .cog-form input.el-input__inner:focus,.cog-wrap .cog-form select.el-input__inner:focus,.cog-wrap .cog-form textarea.el-textarea__inner:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(214,20,32,.2)}
+.cog-wrap .cog-form ::placeholder{color:var(--dim);opacity:1}
+.cog-wrap .cog-form input[type=date],.cog-wrap .cog-form input[type=time]{color-scheme:dark}
+.cog-wrap .cog-form input[type=checkbox],.cog-wrap .cog-form input[type=radio]{width:auto;padding:0;accent-color:var(--red)}
+.cog-wrap .cog-form label.el-checkbox{display:flex;align-items:center;gap:.6em;margin:0 0 8px;font-size:.92rem;font-weight:300;letter-spacing:.02em;text-transform:none;color:var(--text);cursor:pointer}
+.cog-wrap .cog-form .el-checkbox__label{color:var(--text)}
+.cog-wrap .cog-form .el-input-number{display:flex;max-width:220px}
+.cog-wrap .cog-form .el-input-number__decrease,.cog-wrap .cog-form .el-input-number__increase{background:var(--panel-2);color:#fff;border:1px solid rgba(255,255,255,.15)}
+.cog-wrap .cog-form button.cog-button{display:inline-flex;align-items:center;justify-content:center;width:100%;padding:.95em 1.9em;border:1px solid var(--red);background:var(--red);color:#fff;font-family:var(--sans);font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border-radius:0;cursor:pointer;transition:background .2s,box-shadow .2s}
+.cog-wrap .cog-form button.cog-button:hover{background:var(--red-bright);border-color:var(--red-bright);box-shadow:var(--glow)}
+.cog-wrap .cog-form .cog-confirmation,.cog-wrap .cog-form .cog-confirmation__message{color:var(--text);font-family:var(--sans)}
+.cog-wrap .cog-form .cog-error-message{font-family:var(--sans)}
+.cog-wrap .cog-branding,.cog-wrap .cog-abuse{opacity:.6}
